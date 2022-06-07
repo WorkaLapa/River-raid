@@ -8,9 +8,9 @@ pygame.display.set_caption("River raid")
 ###WYPEŁNIA OKNO GRY KOLOREM
 
 
-# object current co-ordinates
-x = 200
-y = 200
+#POKAZUJE, GDZIE DOCELOWO ZNAJDUJE SIĘ SAMOLOT NA MAPIE
+x = 100
+y = 550
 
 # dimensions of the object
 szerokosc_obiektu = 10
