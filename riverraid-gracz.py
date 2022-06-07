@@ -1,7 +1,7 @@
 import pygame
 pygame.init()
 
-####POKAZUJE OKNO GRY
+####TWORZY OKNO GDY I JEGO ROZMIAR
 okno_gry = pygame.display.set_mode((900, 600))
 # POKAZJUJE NAZWĘ GRY W PASKU NA GÓRZE
 pygame.display.set_caption("River raid")
