@@ -4,7 +4,7 @@ class Tankowiec:
   def __init__(self):
     self.x_cord = 0
     self.y_cord = 0
-    self.image = pygame.image.load("tankowiec.png")
+#     self.image = pygame.image.load("tankowiec.png")
     
   def tick(self):
     pass
@@ -17,7 +17,7 @@ class Helikopter:
   def __init__(self):
     self.x_cord = 0
     self.y_cord = 0
-    self.image = pygame.image.load("helikopter.png")
+#     self.image = pygame.image.load("helikopter.png")
     
   def tick(self):
     pass
@@ -30,7 +30,7 @@ class Samolot:
   def __init__(self):
     self.x_cord = 0
     self.y_cord = 0
-    self.image = pygame.image.load("samolot.png")
+#     self.image = pygame.image.load("samolot.png")
     
   def tick(self):
     pass
@@ -43,7 +43,7 @@ class Paliwo:
   def __init__(self):
     self.x_cord = 0
     self.y_cord = 0
-    self.image = pygame.image.load("paliwo.png")
+#     self.image = pygame.image.load("paliwo.png")
     
   def tick(self):
     pass
@@ -56,7 +56,7 @@ class Most:
   def __init__(self):
     self.x_cord = 0
     self.y_cord = 0
-    self.image = pygame.image.load("most.png")
+#     self.image = pygame.image.load("most.png")
     
   def tick(self):
     pass
