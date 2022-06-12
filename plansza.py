@@ -1,7 +1,5 @@
 import pygame
 import random
-import sys
-import os
 from PLAYERklasa import *
 
 pygame.init()
@@ -11,31 +9,33 @@ clock=pygame.time.Clock()
 bok = 50*(random.randint(1,8))
 
 ###LISTA SPRITÓW TO LISTA WSZYSTKICH OBIEKTÓW RUSZAJĄCYCH SIĘ
-###PONIŻSZE LINIJKI KODU TWORZĄ TRZY LISTY
+###PONIŻSZE LINIJKI KODU TWORZĄ CZTERY LISTY
 lista_spritow= pygame.sprite.Group()
 lista_paliwa= pygame.sprite.Group()
 lista_przeciwnikow=pygame.sprite.Group()
+strzelanie=pygame.sprite.Group()
+###TWORZENIE GRACZA
 gracz=Samolot(15,35)
-gracz.rect.x=100
-gracz.rect.y=550
+gracz.rect.x=450 ###UMIESZCZENIE W POZIOMIE NA MAPIE
+gracz.rect.y=550 ###UMIESZCZENIE W PIONIE NA MAPIE
 predkosc_samolotu=2
 lista_spritow.add(gracz)
 
 paliwo=Paliwo(5,20)
 paliwo.rect.x=random.randint(50,800)
-paliwo.rect.y=550
+paliwo.rect.y=random.randint(50,500)
 lista_spritow.add(paliwo)
 lista_paliwa.add(paliwo)
 
 tankowiec=Tankowiec(5,20)
-paliwo.rect.x=random.randint(50,800)
-paliwo.rect.y=random.randint(50,550)
+tankowiec.rect.x=random.randint(50,800)
+tankowiec.rect.y=random.randint(50,550)
 lista_spritow.add(tankowiec)
 lista_przeciwnikow.add(tankowiec)
 
 helikopter=Helikopter(5,20)
-paliwo.rect.x=random.randint(50,800)
-paliwo.rect.y=random.randint(50,550)
+helikopter.rect.x=random.randint(50,800)
+helikopter.rect.y=random.randint(50,550)
 lista_spritow.add(helikopter)
 lista_przeciwnikow.add(helikopter)
 
@@ -52,22 +52,13 @@ while trwanie_gry:
         pygame.time.delay(10)
         if event.type == pygame.QUIT:
             trwanie_gry = False
-        ###KOORDYNUJE PRZYCISKI
-    przyciski = pygame.key.get_pressed()
-
-        ##WCIŚNIĘCIE LEWEGO PRZYCISKU
-    if przyciski[pygame.K_LEFT] and gracz.rect.x>0:
-        gracz.rect.x -= predkosc_samolotu
-        ##I PRAWEGO
-    if przyciski[pygame.K_RIGHT] and gracz.rect.x<845:
-        gracz.rect.x += predkosc_samolotu
 
         ##PĘTLA WYŁĄCZA GRĘ W RAZIE KOLIZJI Z PALIWEM - DO ZMIANY
     lista_kolizji_z_paliwem = pygame.sprite.spritecollide(gracz,lista_paliwa, False)
     for obiekt in lista_kolizji_z_paliwem:
         trwanie_gry=False
         lista_spritow.update()
-    ##PĘTLA WYŁĄCZA GRĘ W RAZIE KOLIZJI Z PALIWEM - DO ZMIANY
+    ##PĘTLA WYŁĄCZA GRĘ W RAZIE KOLIZJI Z PRZECIWNIKAMI
     lista_kolizji_z_przeciwnikami = pygame.sprite.spritecollide(gracz,lista_przeciwnikow, False)
     for obiekt in lista_kolizji_z_przeciwnikami:
         trwanie_gry=False
@@ -83,4 +74,5 @@ while trwanie_gry:
 
 
 pygame.display.update()
+
 clock.tick(15)
