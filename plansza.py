@@ -15,25 +15,25 @@ lista_paliwa= pygame.sprite.Group()
 lista_przeciwnikow=pygame.sprite.Group()
 strzelanie=pygame.sprite.Group()
 ###TWORZENIE GRACZA
-gracz=Samolot(15,35)
+gracz=Samolot()
 gracz.rect.x=450 ###UMIESZCZENIE W POZIOMIE NA MAPIE
 gracz.rect.y=550 ###UMIESZCZENIE W PIONIE NA MAPIE
 predkosc_samolotu=2
 lista_spritow.add(gracz)
 
-paliwo=Paliwo(5,20)
+paliwo=Paliwo()
 paliwo.rect.x=random.randint(50,800)
 paliwo.rect.y=random.randint(50,500)
 lista_spritow.add(paliwo)
 lista_paliwa.add(paliwo)
 
-tankowiec=Tankowiec(5,20)
+tankowiec=Tankowiec()
 tankowiec.rect.x=random.randint(50,800)
 tankowiec.rect.y=random.randint(50,550)
 lista_spritow.add(tankowiec)
 lista_przeciwnikow.add(tankowiec)
 
-helikopter=Helikopter(5,20)
+helikopter=Helikopter()
 helikopter.rect.x=random.randint(50,800)
 helikopter.rect.y=random.randint(50,550)
 lista_spritow.add(helikopter)
