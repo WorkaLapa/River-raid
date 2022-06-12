@@ -2,7 +2,7 @@ import pygame
 
 
 class Samolot(pygame.sprite.Sprite):
-    def __init__(self, szerokosc, wysokosc):
+    def __init__(self):
         super().__init__()
         pygame.sprite.Sprite.__init__(self)
         img=pygame.image.load(os.path.join('samolot.png')).convert()
@@ -24,7 +24,7 @@ class Samolot(pygame.sprite.Sprite):
             self.strzal=czas
             
 class Pocisk(pygame.sprite.Sprite):
-    def __init__(self,szerokosc,wysokosc):
+    def __init__(self):
         pygame.sprite.Sprite.__init__(self)
         self.image=pygame.image.load("kula.png")
         self.rect=self.image.get_rect()
@@ -36,7 +36,7 @@ class Pocisk(pygame.sprite.Sprite):
 
 
 class Paliwo(pygame.sprite.Sprite):
-    def __init__(self, szerokosc, wysokosc):
+    def __init__(self):
         super().__init__()
         pygame.sprite.Sprite.__init__(self)
         img=pygame.image.load(os.path.join('paliwo.png')).convert()
@@ -48,7 +48,7 @@ class Paliwo(pygame.sprite.Sprite):
             self.kill()
 
 class Tankowiec(pygame.sprite.Sprite):
-    def __init__(self, szerokosc, wysokosc):
+    def __init__(self):
         super().__init__()
         pygame.sprite.Sprite.__init__(self)
         img=pygame.image.load(os.path.join('tankowiec.png')).convert()
@@ -60,7 +60,7 @@ class Tankowiec(pygame.sprite.Sprite):
 
 class Helikopter(pygame.sprite.Sprite):
 
-    def __init__(self, szerokosc, wysokosc):
+    def __init__(self):
         super().__init__()
         pygame.sprite.Sprite.__init__(self)
         img=pygame.image.load(os.path.join('helikopter.png')).convert()
