@@ -1,8 +1,13 @@
 import pygame
+import sys 
 
 #OKNO
 pygame.init()
 okno = pygame.display.set_mode((900, 600))
+pygame.display.set_caption("River raid")
+clock=pygame.time.Clock()
+bok = 50*(random.randint(1,8))
+
 
 #ZMIENNE KOLORÓW ORAZ WYMIATY PASKA PALIWA
 BLACK = (0, 0, 0)
@@ -11,7 +16,6 @@ YELLOW = (225, 225, 0)
 RED = (225, 0, 0)
 x = 10
 y = 30
-szer = 130
 wys = 25
 
 #PĘTLA DZIAŁANIA GRY
