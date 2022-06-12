@@ -9,6 +9,12 @@ bok = 50*(random.randint(1,8))
 lap=1
 lvl_length=22*50
 
+umieszczenie_poziom = 100
+umieszczenie_pion = 550
+szerokosc_obiektu = 15
+wysokosc_obiektu = 35
+predkosc_samolotu = 7
+
 def pasmo(kolejnosc, zbior):
     pasl=pygame.Rect(0, -50*(kolejnosc), bok*50, 50)
     pasp=pygame.Rect(900-bok*50, -50*(kolejnosc), bok*50, 50)
@@ -61,12 +67,18 @@ if lap==1:
 run = True
 
 
-while run:
+trwanie_gry=True
+while trwanie_gry:
     for event in pygame.event.get():
-        if event.type==pygame.KEYDOWN:
-            if event.key==pygame.K_ESCAPE:
-                run = False
-                exit()
+        if event.type == pygame.QUIT:
+            trwanie_gry = False
+    if przyciski[pygame.K_LEFT] and x>0:
+        umieszczenie_poziom-= predkosc_samolotu
+    if przyciski[pygame.K_RIGHT] and x<900-szerokosc_obiektu:
+        umieszczenie_poziom += predkosc_samolotu
+    okno.fill((0, 0, 255))
+    samolot=pygame.draw.rect(okno, (255, 223, 0), (umieszczenie_poziom, umieszczenie_pion, szerokosc_obiektu, wysokosc_obiektu))
+        
     for block in blocks:
         block.move_ip(0, lvl_speed)
     for enemy in wrog:
@@ -77,8 +89,12 @@ while run:
     okno.fill((0, 0, 0))
     for block in blocks:
         pygame.draw.rect(okno, (0, 255, 0), block)
+        if block.colliderect(samolot):
+            trwanie_gry=False
     for enemy in wrog:
         pygame.draw.rect(okno, (0, 100, 100), enemy)
+        if enemy.colliderect(samolot):
+            trwanie_gry=False
     for zbiornik in fuel:
         pygame.draw.rect(okno, (160, 32, 50), zbiornik)
 
