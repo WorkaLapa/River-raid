@@ -5,7 +5,6 @@ class Samolot(pygame.sprite.Sprite):
     def __init__(self, szerokosc, wysokosc):
         super().__init__()
         pygame.sprite.Sprite.__init__(self)
-        self.images=[]
         img=pygame.image.load(os.path.join('samolot.png')).convert()
         self.image=img
         self.rect=self.image.get_rect()
