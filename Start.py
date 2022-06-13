@@ -64,14 +64,12 @@ if lap==1:
 
 
 
-run = True
-
-
 trwanie_gry=True
 while trwanie_gry:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             trwanie_gry = False
+    przyciski = pygame.key.get_pressed()
     if przyciski[pygame.K_LEFT] and umieszczenie_poziom>0:
         umieszczenie_poziom-= predkosc_samolotu
     if przyciski[pygame.K_RIGHT] and umieszczenie_poziom<900-szerokosc_obiektu:
