@@ -25,7 +25,7 @@ class Samolot(pygame.sprite.Sprite):
             self.strzal=czas
             
 class Pocisk(pygame.sprite.Sprite):
-    def __init__(self):
+    def __init__(self, szerokosc, wysokosc):
         pygame.sprite.Sprite.__init__(self)
         self.image=pygame.image.load("kula.png")
         self.rect=self.image.get_rect()
