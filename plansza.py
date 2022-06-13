@@ -1,6 +1,6 @@
 import pygame
+import os
 import random
-from PLAYERklasa import *
 
 pygame.init()
 okno=pygame.display.set_mode((900,600))
@@ -64,6 +64,12 @@ while trwanie_gry:
         trwanie_gry=False
         lista_spritow.update()
         lista_przeciwnikow.update()
+
+    gracz.ruch()
+
+    strzelanie.update()
+    lista_spritow.update()
+    lista_przeciwnikow.update()
 
     okno.fill((0,0,255))
     pygame.draw.rect(okno, (0, 255, 0), (0, 0, bok, 600))
