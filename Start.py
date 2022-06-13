@@ -72,9 +72,9 @@ while trwanie_gry:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             trwanie_gry = False
-    if przyciski[pygame.K_LEFT] and x>0:
+    if przyciski[pygame.K_LEFT] and umieszczenie_poziom>0:
         umieszczenie_poziom-= predkosc_samolotu
-    if przyciski[pygame.K_RIGHT] and x<900-szerokosc_obiektu:
+    if przyciski[pygame.K_RIGHT] and umieszczenie_poziom<900-szerokosc_obiektu:
         umieszczenie_poziom += predkosc_samolotu
     okno.fill((0, 0, 255))
     samolot=pygame.draw.rect(okno, (255, 223, 0), (umieszczenie_poziom, umieszczenie_pion, szerokosc_obiektu, wysokosc_obiektu))
