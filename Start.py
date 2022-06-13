@@ -84,7 +84,7 @@ while trwanie_gry:
     for zbiornik in fuel:
         zbiornik.move_ip(0, lvl_speed)
 
-    okno.fill((0, 0, 0))
+
     for block in blocks:
         pygame.draw.rect(okno, (0, 255, 0), block)
         if block.colliderect(samolot):
