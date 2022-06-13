@@ -1,5 +1,6 @@
 import pygame
 import sys 
+import random 
 
 #OKNO
 pygame.init()
@@ -8,12 +9,15 @@ pygame.display.set_caption("River raid")
 clock=pygame.time.Clock()
 bok = 50*(random.randint(1,8))
 
+#LISTA SPRITÓW
 lista_spritow= pygame.sprite.Group()
 lista_paliwa= pygame.sprite.Group()
 lista_przeciwnikow=pygame.sprite.Group()
 strzelanie=pygame.sprite.Group()
 lista_kolizji_z_paliwem=pygame.sprite.Group()
 lista_kolizji_z_przeciwnikami=pygame.sprite.Group()
+
+obiekt=object
 
 #ZMIENNE KOLORÓW ORAZ WYMIATY PASKA PALIWA
 BLACK = (0, 0, 0)
@@ -31,7 +35,7 @@ while trwanie_gry:
         pygame.time.delay(10)
         if event.type == pygame.QUIT:
             trwanie_gry = False
-
+          
 #PĘTLA ZURZYCIA PALIWA I JEGO DOŁADOWYWANIA
     while True:
         for i in range(500):
