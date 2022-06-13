@@ -1,4 +1,5 @@
 import pygame
+import os
 
 
 class Samolot(pygame.sprite.Sprite):
