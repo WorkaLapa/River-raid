@@ -1,6 +1,7 @@
 import pygame
 import os
 import random
+from PLAYERklasa import *
 
 pygame.init()
 okno=pygame.display.set_mode((900,600))
