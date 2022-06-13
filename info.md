@@ -1,7 +1,8 @@
 INSTRUKCJE:
 aby poruszyć się w prawo, wciśnij prawą strzałkę
 aby poruszyć się w lewo, wciśnij lewą strzałkę
+aby przyspieszyć lub zwolnić, wciśnij odpowiednio strzałkę w przód lub w tył
 
-Unikaj zielonych pól, będących terenem na mapie oraz ciemnozielonych kwadratów.
+Unikaj zielonych pól, będących terenem na mapie oraz ciemnoszarych kwadratów.
 Zderzenie się z nimi oznacza koniec gry.
-Czerwone prostokąty oznaczają paliwo
+Czerwone prostokąty oznaczają paliwo - pamiętaj o regularnym tankowaniu!
