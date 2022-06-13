@@ -47,7 +47,7 @@ def enemy(kolejnosc, szer, zbiorwrog, zbiorpali):
         #szerokość losowana z szer*50 od lewej (lewy bok ściany) do prawego boku ściany (900-szer*50)
         wrog = pygame.Rect(szerter, -50*(kolejnosc), 30, 50)
         zbiorpali.append(wrog)
-        print(los)
+        
 
 
 blocks=[]
