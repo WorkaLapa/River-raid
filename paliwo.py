@@ -8,6 +8,12 @@ pygame.display.set_caption("River raid")
 clock=pygame.time.Clock()
 bok = 50*(random.randint(1,8))
 
+lista_spritow= pygame.sprite.Group()
+lista_paliwa= pygame.sprite.Group()
+lista_przeciwnikow=pygame.sprite.Group()
+strzelanie=pygame.sprite.Group()
+lista_kolizji_z_paliwem=pygame.sprite.Group()
+lista_kolizji_z_przeciwnikami=pygame.sprite.Group()
 
 #ZMIENNE KOLORÓW ORAZ WYMIATY PASKA PALIWA
 BLACK = (0, 0, 0)
