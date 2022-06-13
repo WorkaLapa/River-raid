@@ -10,7 +10,7 @@ bok = 50*(random.randint(1,8))
 lap=1
 lvl_length=22*50
 petla = 0
-#ZMIENNE KOLORÓW ORAZ WYMIATY PASKA PALIWA
+#ZMIENNE KOLORÓW ORAZ WYMIARY PASKA PALIWA
 BLACK = (0, 0, 0)
 GREEN = (0, 225, 0)
 YELLOW = (225, 225, 0)
@@ -42,7 +42,7 @@ def enemy(kolejnosc, szer, zbiorwrog, zbiorpali):
         szerter = random.randint(szer*50, 900-(szer+1)*50-20)
         wrog = pygame.Rect(szerter, -50*(kolejnosc), 70, 25)
         zbiorwrog.append(wrog)
-    elif los == 8 or los == 7: #fuel
+    elif los == 8: #fuel
         szerter = random.randint(szer*50, 900-(szer+1)*50)
         #szerokość losowana z szer*50 od lewej (lewy bok ściany) do prawego boku ściany (900-szer*50)
         wrog = pygame.Rect(szerter, -50*(kolejnosc), 30, 50)
